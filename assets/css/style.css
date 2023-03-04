@@ -1,0 +1,135 @@
+/* 
+ <@codandobugs>
+ Source: https://developer.mozilla.org/en-US/docs/Web/CSS
+ Código do mini projeto árvore de links
+*/
+
+/* Inclusão externa de uma fonte textual da api do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+/* Definir a margem e espaçamento de todos elementos para valor 0 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Define o estilo de texto da tag h2 */
+h2 {
+  font-family: "Montserrat", sans-serif;
+  color: #94dd26;
+  font-weight: bolder;
+  text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.9);
+  text-transform: uppercase;
+  margin-top: 0.6em;
+}
+
+/* Definir a largura e altura do documento html e do seu corpo */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* Definir uma imagem no background do corpo do documento */
+body {
+  background-image: url("../images/binary-background.gif");
+}
+
+/* 
+Definir largura, altura e modo de exibição da div com id container 
+Essa div é elemento pai de todo o conteúdo
+*/
+#container {
+  width: 100%;
+  height: 100%;
+  /* 
+  https://developer.mozilla.org/en-US/docs/Web/CSS/display 
+  Exibição em modo tabela css
+  */
+  /* display: table; */
+}
+
+/* 
+Div filha da #container e pai do restante dos elementos
+Centraliza os elementos filhos dela
+*/
+#content {
+  /* display: table-cell; */
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  margin-top: 1.6em;
+  padding: 1.6em;
+}
+
+/* Determina a largura da imagem e cria o círculo em torno dela */
+#logo {
+  width: 150px;
+  border: 4px solid #94dd26;
+  border-radius: 50%;
+}
+
+/* Tags âncoras */
+.link {
+  text-decoration: none;
+}
+
+/* Ícones dos links para as redes sociais */
+.link-icon {
+  color: #fff;
+  font-size: 1.4em;
+  padding: 0.6em;
+  text-align: center;
+  margin-top: 0.6em;
+  margin-right: 0.6em;
+}
+
+/* Div pai para árvore de links */
+#links-tree {
+  margin-top: 1.6em;
+}
+
+/* Div filha da áncora para criar o formato do botão */
+.link-btn {
+  width: 50%;
+  margin: auto;
+  padding: 0.6em;
+  margin-top: 0.6em;
+  color: #fff;
+  font-size: 1.4em;
+}
+
+/* Background do botão da árvore de links */
+.bg-btn {
+  border: 1px solid #94dd26;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.bg-btn:hover {
+  color: #000;
+  font-weight: bolder;
+  background-color: #94dd26;
+  box-shadow: 0px -2px 1px #fff;
+  transition: 0.5s;
+}
+
+/* 
+Tratamento de responsividade para dispositivos com telas menores a 768px
+*/
+@media (max-width: 768px) {
+  /* Faz com que o elemento pai tenha a largura cheia da tela em dispositivos menores a 768px */
+  #content {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .link-btn {
+    width: 97%;
+    padding: 0px;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+  }
+}
