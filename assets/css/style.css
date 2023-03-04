@@ -36,17 +36,12 @@ body {
 }
 
 /* 
-Definir largura, altura e modo de exibição da div com id container 
+Definir largura e altura da div com id container 
 Essa div é elemento pai de todo o conteúdo
 */
 #container {
   width: 100%;
   height: 100%;
-  /* 
-  https://developer.mozilla.org/en-US/docs/Web/CSS/display 
-  Exibição em modo tabela css
-  */
-  /* display: table; */
 }
 
 /* 
@@ -54,7 +49,6 @@ Div filha da #container e pai do restante dos elementos
 Centraliza os elementos filhos dela
 */
 #content {
-  /* display: table-cell; */
   text-align: center;
   width: 50%;
   margin: auto;
